@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <style>
+    /* Global Styling */
+    html, body {
+      overflow-x: hidden; /* Prevents horizontal scrolling */
+      margin: 0;          /* Removes default margin */
+      padding: 0;         /* Removes default padding */
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Georgia', serif; /* Classic serif font */
+      background-image: url('https://assets.asana.biz/transform/d2ffb5c8-a7c2-4e39-8447-f8e2501c5bdc/article-project-planning-project-design-2x');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333; /* A subtle dark color */
+      height: 100vh; /* Ensures the body takes up the full height of the viewport */
+    }
+
+    /* Nav Styling */
+    .nav-pills {
+      background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item a {
+      color: #b22222; /* Darker red for classic look */
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px 20px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+    }
+
+    .nav-item a:hover {
+      background-color: #b22222; /* Classic red hover */
+      color: #fff;
+      box-shadow: 0px 5px 10px rgba(178, 34, 34, 0.6);
+    }
+
+    .myDiv {
+      text-align: right;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    /* Classic Heading Styling */
+    .heading {
+      font-size: 60px;
+      font-family: 'Georgia', serif; /* Classic serif font for elegance */
+      font-weight: bold;
+      text-align: center;
+      color: #2c3e50; /* A dark, elegant color */
+      margin-top: 0; /* Removes any margin */
+      padding-top: 20px; /* Adds slight padding from the top */
+      letter-spacing: 2px; /* Adds spacing between the letters */
+      text-transform: uppercase; /* Classic uppercase style */
+      border-bottom: 2px solid #b22222; /* Elegant bottom border */
+      display: inline-block;
+      padding-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+      background-color: rgba(255, 255, 255, 0.7); /* Subtle transparent background */
+      border-radius: 8px;
+    }
+
+    /* Button Styling */
+    .btn-danger {
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 10px 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-danger:hover {
+      transform: scale(1.1); /* Enlarge button on hover */
+    }
+
+    /* Animation for heading */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Classic Styled Heading for Python and ML Projects -->
+  <h1 class="heading">Python and ML Projects</h1>
+
+  <div class="myDiv">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="btn btn-danger" href="{% url 'training_data' %}">Hospital Patient Survival</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

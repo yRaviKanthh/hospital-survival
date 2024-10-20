@@ -1,0 +1,176 @@
+{% block content %}
+  <h1 style="text-align: center; font-size: 50px; color: #2c3e50; font-family: 'Georgia', serif; margin-bottom: 20px;">Hospital Patient Survival</h1>
+  
+  <form method="POST">
+    {% csrf_token %}
+    
+    <div class="form-container">
+      <table>
+        <style>
+          body {
+            background-image: url('https://img.etimg.com/thumb/width-1600,height-900,imgsize-16400,resizemode-75,msid-92641715/industry/healthcare/biotech/healthcare/care-acquires-indores-specialty-hospital-chl.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: 'Garamond', serif; /* Classic serif font */
+            color: #2c3e50; /* Darker text color for contrast */
+          }
+
+          .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for form */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+            max-width: 800px; /* Max width for form */
+            margin: auto; /* Center the form */
+            margin-top: 30px; /* Space from the top */
+          }
+
+          table {
+            width: 100%;
+            border-collapse: collapse; /* Collapse borders */
+          }
+
+          td {
+            padding: 15px; /* Padding for table cells */
+            font-size: 18px; /* Font size */
+          }
+
+          input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #b8860b; /* Gold border */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            outline: none; /* Remove outline */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+            transition: border 0.3s ease; /* Smooth transition */
+          }
+
+          input[type="text"]:focus {
+            border: 2px solid #8b4513; /* Darker brown border on focus */
+          }
+
+          button {
+            background-color: #8b4513; /* Dark brown button color */
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 30px; /* Rounded button */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition */
+            width: 100%; /* Full width */
+          }
+
+          button:hover {
+            background-color: #b8860b; /* Gold on hover */
+          }
+
+          .result-container {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9; /* Light gray background */
+            border: 2px solid #b8860b; /* Gold border */
+            border-radius: 10px; /* Rounded corners */
+            color: #8b4513; /* Darker text color */
+            font-size: 20px; /* Larger font size */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+          }
+
+          /* Styling result heading */
+          .result-heading {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #dc3545; /* Red for emphasis */
+          }
+        </style>
+
+        <tr>
+          <td>Enter the ID_Patient_Care_Situation</td>
+          <td><input type="text" name="textID_Patient_Care_Situation" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Diagnosed Condition</td>
+          <td><input type="text" name="textDiagnosed_Condition" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Patient ID</td>
+          <td><input type="text" name="textPatient_ID" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Treated with Drugs</td>
+          <td><input type="text" name="textTreated_with_drugs" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Patient Age</td>
+          <td><input type="text" name="textPatient_Age" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Patient Body Mass Index</td>
+          <td><input type="text" name="textPatient_Body_Mass_Index" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Patient Smoker</td>
+          <td><input type="text" name="textPatient_Smoker" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Patient Rural Urban</td>
+          <td><input type="text" name="textPatient_Rural_Urban" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Patient Mental Condition</td>
+          <td><input type="text" name="textPatient_mental_condition" required></td>
+        </tr>
+        <tr>
+          <td>Enter A</td>
+          <td><input type="text" name="textA" required></td>
+        </tr>
+        <tr>
+          <td>Enter B</td>
+          <td><input type="text" name="textB" required></td>
+        </tr>
+        <tr>
+          <td>Enter C</td>
+          <td><input type="text" name="textC" required></td>
+        </tr>
+        <tr>
+          <td>Enter D</td>
+          <td><input type="text" name="textD" required></td>
+        </tr>
+        <tr>
+          <td>Enter E</td>
+          <td><input type="text" name="textE" required></td>
+        </tr>
+        <tr>
+          <td>Enter F</td>
+          <td><input type="text" name="textF" required></td>
+        </tr>
+        <tr>
+          <td>Enter Z</td>
+          <td><input type="text" name="textZ" required></td>
+        </tr>
+        <tr>
+          <td>Enter the Number of Previous Conditions</td>
+          <td><input type="text" name="textNumber_of_prev_cond" required></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" name="buttonpredict">Predict</button>
+          </td>
+        </tr>
+      </table>
+
+      {% if result %}
+      <div class="result-container">
+        <div class="result-heading">Prediction Result:</div>
+        <p>{{ result }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </form>
+{% endblock %}
