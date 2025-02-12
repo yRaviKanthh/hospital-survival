@@ -12,16 +12,7 @@ The application predicts whether a patient will survive for **1 year** based on 
 ✅ **Handles missing values** in datasets automatically  
 ✅ **One-hot encodes categorical data** for better model performance  
 ✅ User-friendly web form for inputting patient details  
-✅ Displays the **prediction result dynamically**  
-
----
-
-## 📂 Project Structure  
-GUI/ ├── hospital_prediction/ │ ├── pycache/ # Compiled Python files │ ├── templates/ # HTML templates for frontend │ │ ├── index.html # Home Page │ │ ├── training_data.html # Prediction Result Page │ ├── init.py # Package initialization │ ├── views.py # Handles user requests & ML model │ ├── models.py # Model definitions (if needed) │ ├── urls.py # Django URL routing │ ├── admin.py # Django admin setup │ ├── apps.py # Django app configuration │ ├── tests.py # Test cases ├── db.sqlite3 # SQLite database file ├── training_data.csv # Dataset for training the model ├── manage.py # Django project management ├── README.md # Project documentation ├── .gitignore # Ignore unnecessary files
-
-yaml
-Copy
-Edit
+✅ Displays the **prediction result dynamically** 
 
 ---
 
@@ -52,6 +43,8 @@ Edit
 python manage.py runserver
 🔗 Open in your browser: http://127.0.0.1:8000/
 
+---
+
 📸 Screenshots
 🔹 Prediction Page
 
@@ -59,22 +52,21 @@ python manage.py runserver
 
 🔹 Result
 
+---
+
 🏆 Future Enhancements
 ✅ Improve prediction accuracy with ensemble learning models
 ✅ Add data visualization for patient survival trends
 ✅ Deploy on cloud platforms
 ✅ Implement an API for third-party integration
+
+---
+
 💡 Need Help?
 Feel free to open an issue or contribute to improve this project! 😊
 ⭐ If you like this project, give it a star on GitHub! ⭐
 
-yaml
-Copy
-Edit
 
----
-
-✅ Now your **README** follows a well-structured GitHub format with proper headings, code blocks, and styling. Let me know if you need any further changes! 🚀
 
 
 
