@@ -50,23 +50,24 @@ python manage.py runserver
 
 ### 🔹 Predictionpage
 
-![predictionpage]
+![predictionpage](https://raw.githubusercontent.com/yRaviKanthh/hospital-survival/823dc977d296031372f71dbad626d94ddd242a32/screenshots/mainpage.png)
+
 
 ### 🔹 Database
 
-![database]
+![database](https://raw.githubusercontent.com/yRaviKanthh/hospital-survival/823dc977d296031372f71dbad626d94ddd242a32/screenshots/DB.png)
 
 ### 🔹 Result
 
-![Result]
+![Result](https://raw.githubusercontent.com/yRaviKanthh/hospital-survival/823dc977d296031372f71dbad626d94ddd242a32/screenshots/Result.png)
 
 ---
 
 ### 🏆 Future Enhancements  
-✅ Improve prediction accuracy with ensemble learning models
-✅ Add data visualization for patient survival trends
-✅ Deploy on cloud platforms
-✅ Implement an API for third-party integration
+-✅ Improve prediction accuracy with ensemble learning models
+-✅ Add data visualization for patient survival trends
+-✅ Deploy on cloud platforms
+-✅ Implement an API for third-party integration
 
 ---
 
