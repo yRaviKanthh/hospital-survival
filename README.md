@@ -63,11 +63,14 @@ python manage.py runserver
 
 ---
 
-### 🏆 Future Enhancements  
--✅ Improve prediction accuracy with ensemble learning models
--✅ Add data visualization for patient survival trends
--✅ Deploy on cloud platforms
--✅ Implement an API for third-party integration
+🏆 Future Enhancements
+✅ Improve prediction accuracy with ensemble learning models
+
+✅ Add data visualization for patient survival trends
+
+✅ Deploy on cloud platforms
+
+✅ Implement an API for third-party integration
 
 ---
 
