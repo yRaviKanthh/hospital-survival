@@ -29,32 +29,40 @@ The application predicts whether a patient will survive for **1 year** based on 
 
 ### 🔹 Clone the Repository  
 ```bash
-git clone https://github.com/yRaviKanthh/hospital-patient-survival.git
-cd hospital-patient-survival
-🔹 Install Dependencies
-bash
-Copy
-Edit
+git clone https://github.com/yRaviKanthh/flower-prediction.git
+cd flower-prediction
+```
+### 🔹 Install Dependencies
+```bash
+
 pip install -r requirements.txt
-🔹 Run the Application
-bash
-Copy
-Edit
+```
+
+### 🔹 Run the Application
+```bash
+
 python manage.py runserver
 🔗 Open in your browser: http://127.0.0.1:8000/
+```
+---
+
+### 📸 Screenshots
+
+### 🔹 Predictionpage
+
+![predictionpage]
+
+### 🔹 Database
+
+![database]
+
+### 🔹 Result
+
+![Result]
 
 ---
 
-📸 Screenshots
-🔹 Prediction Page
-
-🔹 Database
-
-🔹 Result
-
----
-
-🏆 Future Enhancements
+## 🏆 Future Enhancements  
 ✅ Improve prediction accuracy with ensemble learning models
 ✅ Add data visualization for patient survival trends
 ✅ Deploy on cloud platforms
